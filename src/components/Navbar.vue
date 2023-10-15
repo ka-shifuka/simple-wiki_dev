@@ -15,6 +15,26 @@ const menuCounter = ref(false);
     <h1 class="font-semibold mt-1 text-2xl text-zinc-800">
       Simple <span class="text-[#7c5c36] font-['Grandstander']">Wiki</span>
     </h1>
+    <!-- logo and title -->
+
+    <!-- menu list in md screen -->
+    <section role="menu_list" class="hidden md:block">
+      <ul class="flex gap-2">
+        <li class="">
+          <a href="#">Home</a>
+        </li>
+        <li class="">
+          <a href="#">About API</a>
+        </li>
+        <li class="">
+          <a href="#">API Documentation</a>
+        </li>
+        <li class="">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </section>
+    <!-- menu list in md screen -->
 
     <!-- menu and search -->
     <div class="flex justify-center items-center gap-1.5">
@@ -42,7 +62,7 @@ const menuCounter = ref(false);
       </a>
       <button
         @click="menuCounter = !menuCounter"
-        class="relative transition text-red-100 w-[30px] h-[30px]"
+        class="relative transition text-red-100 w-[30px] h-[30px] md:hidden"
       >
         <!-- svg -->
         <svg
@@ -76,10 +96,8 @@ const menuCounter = ref(false);
 
     <!-- menu list -->
     <div
-      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300"
-      :class="
-        menuCounter ? 'w-[100vw] bg-[rgba(0,0,0,0.5)]' : 'w-0 bg-transparent'
-      "
+      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300 md:hidden"
+      :class="menuCounter ? '_in' : '_out'"
     >
       <section
         role="menu_list"
@@ -97,7 +115,7 @@ const menuCounter = ref(false);
         <section class="@list mx-4 border-b-2 overflow-hidden">
           <ul class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800">
             <li class="">
-              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
+              <a href="#home" class="block w-full p-2 rounded-md bg-amber-100"
                 >Home</a
               >
             </li>
@@ -112,8 +130,10 @@ const menuCounter = ref(false);
               >
             </li>
             <li class="">
-              <a href="#" class="block w-full p-2 rounded-md bg-amber-100 underline text-blue-500"
-                >API DOCUMENTATION (wikipedia)</a
+              <a
+                href="#"
+                class="block w-full p-2 rounded-md bg-amber-100 underline text-blue-500"
+                >API Documentation (Wikipedia)</a
               >
             </li>
             <li class="">
@@ -131,5 +151,44 @@ const menuCounter = ref(false);
 <!-- end template -->
 
 <!-- style -->
-<style scoped></style>
+<style scoped>
+._in {
+  animation-name: in;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+._out {
+  animation-name: out;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes in {
+  0% {
+    width: 100vw;
+  }
+  50% {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes out {
+  0% {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    width: 100vw;
+  }
+  100% {
+    width: 0vw;
+  }
+}
+</style>
 <!-- end style -->

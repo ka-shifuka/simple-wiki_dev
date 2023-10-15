@@ -7,18 +7,18 @@ import Jumbotron from "./components/Jumbotron.vue";
 
 <!-- template -->
 <template>
-  <div class="@container w-screen h-screen flex flex-col justify-between">
+  <div class="@container w-screen min-h-screen flex flex-col justify-between">
     <!-- main header page -->
     <section>
       <header>
         <Navbar></Navbar>
-        <Jumbotron></Jumbotron>
+        <Jumbotron id="home"></Jumbotron>
       </header>
     </section>
     <!-- main header page -->
 
     <!-- fotter page -->
-    <section>footer</section>
+    <section class="h-screen">footer</section>
     <!-- fotter page -->
   </div>
 </template>

@@ -5,3 +5,7 @@
 * {
   font-family: "Open sans", Sans-Serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
