@@ -10,8 +10,10 @@ import Jumbotron from "./components/Jumbotron.vue";
   <div class="@container w-screen h-screen flex flex-col justify-between">
     <!-- main header page -->
     <section>
-      <Navbar></Navbar>
-      <Jumbotron></Jumbotron>
+      <header>
+        <Navbar></Navbar>
+        <Jumbotron></Jumbotron>
+      </header>
     </section>
     <!-- main header page -->
 

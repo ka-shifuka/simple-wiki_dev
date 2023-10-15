@@ -9,10 +9,10 @@ const menuCounter = ref(false);
 <!-- template -->
 <template>
   <nav
-    class="@navbar bg-white w-screen h-16 flex justify-between items-center p-2.5"
+    class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow md:h-20 md:px-10"
   >
     <!-- logo and title -->
-    <h1 class="font-semibold text-2xl">Simple Wiki</h1>
+    <h1 class="font-semibold text-2xl text-zinc-800">Simple Wiki</h1>
 
     <!-- menu and search -->
     <div class="flex justify-center items-center gap-1.5">
@@ -42,9 +42,59 @@ const menuCounter = ref(false);
         @click="menuCounter = !menuCounter"
         class="relative transition text-red-100 w-[30px] h-[30px]"
       >
-        <img class="fill-amber-300" src="../asset/menu-bar.svg" alt="" />
+        <!-- svg -->
+        <svg
+          viewBox="0 0 28 28"
+          fill="hsl(217, 32.6%, 17.5%)"
+          xmlns="http://www.w3.org/2000/svg"
+          transform="rotate(180)"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M4 7C4 6.44771 4.44772 6 5 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H5C4.44772 8 4 7.55229 4 7Z"
+            ></path>
+            <path
+              d="M4 13.9998C4 13.4475 4.44772 12.9997 5 12.9997L16 13C16.5523 13 17 13.4477 17 14C17 14.5523 16.5523 15 16 15L5 14.9998C4.44772 14.9998 4 14.552 4 13.9998Z"
+            ></path>
+            <path
+              d="M5 19.9998C4.44772 19.9998 4 20.4475 4 20.9998C4 21.552 4.44772 21.9997 5 21.9997H22C22.5523 21.9997 23 21.552 23 20.9998C23 20.4475 22.5523 19.9998 22 19.9998H5Z"
+            ></path>
+          </g>
+        </svg>
+        <!-- svg -->
       </button>
     </div>
+    <!-- menu and search -->
+
+    <!-- menu list -->
+    <div
+      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300"
+      :class="
+        menuCounter ? 'w-[100vw] bg-[rgba(0,0,0,0.5)]' : 'w-0 bg-transparent'
+      "
+    >
+      <section
+        role="menu_list"
+        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden"
+        :class="menuCounter ? 'w-[80vw]' : 'w-0'"
+      >
+        <header class="w-full h-16 flex justify-end items-center p-2.5">
+          <button
+            @click="menuCounter = !menuCounter"
+            class="w-[30px] h-[30px] text-xl flex justify-center items-center"
+          >
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
+        </header>
+      </section>
+    </div>
+    <!-- menu list -->
   </nav>
 </template>
 <!-- end template -->

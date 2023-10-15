@@ -5,8 +5,8 @@
 <!-- template -->
 <template>
   <div
-    class="@container w-screen h-[600px]"
-    style="background-image: url('/background.jpeg');"
+    class="@container w-screen h-screen bg-no-repeat brightness-75"
+    style="background-image: url('/background.jpeg')"
   ></div>
 </template>
 <!-- end template -->
