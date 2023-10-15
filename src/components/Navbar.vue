@@ -12,7 +12,9 @@ const menuCounter = ref(false);
     class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow md:h-20 md:px-10"
   >
     <!-- logo and title -->
-    <h1 class="font-semibold text-2xl text-zinc-800">Simple Wiki</h1>
+    <h1 class="font-semibold mt-1 text-2xl text-zinc-800">
+      Simple <span class="text-[#7c5c36] font-['Grandstander']">Wiki</span>
+    </h1>
 
     <!-- menu and search -->
     <div class="flex justify-center items-center gap-1.5">
@@ -92,6 +94,35 @@ const menuCounter = ref(false);
             <i class="bi bi-box-arrow-right"></i>
           </button>
         </header>
+        <section class="@list mx-4 border-b-2 overflow-hidden">
+          <ul class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800">
+            <li class="">
+              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
+                >Home</a
+              >
+            </li>
+            <li class="">
+              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
+                >Search</a
+              >
+            </li>
+            <li class="">
+              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
+                >About API</a
+              >
+            </li>
+            <li class="">
+              <a href="#" class="block w-full p-2 rounded-md bg-amber-100 underline text-blue-500"
+                >API DOCUMENTATION (wikipedia)</a
+              >
+            </li>
+            <li class="">
+              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </section>
       </section>
     </div>
     <!-- menu list -->
