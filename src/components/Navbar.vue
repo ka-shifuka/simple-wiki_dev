@@ -1,6 +1,6 @@
 <!-- script -->
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const menuCounter = ref(false);
 </script>
@@ -131,7 +131,7 @@ const menuCounter = ref(false);
             </li>
             <li class="">
               <a
-                href="#"
+                href="https://github.com/mudroljub/wikipedia-api-docs"
                 class="block w-full p-2 rounded-md bg-amber-100 underline text-blue-500"
                 >API Documentation (Wikipedia)</a
               >
@@ -176,6 +176,7 @@ const menuCounter = ref(false);
   100% {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
   }
 }
 @keyframes out {
