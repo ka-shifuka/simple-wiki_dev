@@ -2,27 +2,6 @@
 <script setup>
 import Navbar from "./components/Navbar.vue";
 import Jumbotron from "./components/Jumbotron.vue";
-import { ref, onMounted } from "vue";
-
-onMounted(() => {
-  function isInViewPort(element) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log(entries, element);
-        } else {
-          console.log("no im ");
-        }
-      });
-    });
-    observer.observe(element);
-  }
-
-  setInterval(() => {
-    const h = document.querySelector("#home");
-    isInViewPort(h);
-  }, 1000);
-});
 </script>
 <!-- end script -->
 
@@ -33,13 +12,17 @@ onMounted(() => {
     <section>
       <header>
         <Navbar></Navbar>
-        <Jumbotron id="home"></Jumbotron>
+        <section class="w-0 h-0 mx-auto" id="home"></section>
+        <Jumbotron></Jumbotron>
       </header>
     </section>
     <!-- main header page -->
 
     <!-- fotter page -->
-    <section class="h-[200vh]">footer</section>
+    <section class="h-[200vh]">
+      <div id="f"></div>
+      footer
+    </section>
     <!-- fotter page -->
   </div>
 </template>

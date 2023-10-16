@@ -5,7 +5,7 @@
 <!-- template -->
 <template>
   <div
-    class="@container w-screen h-screen bg-no-repeat brightness-75"
+    class="@container w-screen h-[105vh] bg-no-repeat bg-cover brightness-75"
     style="background-image: url('/background.jpeg')"
   ></div>
 </template>

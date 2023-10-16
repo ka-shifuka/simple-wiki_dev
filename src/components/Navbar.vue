@@ -1,19 +1,41 @@
 <!-- script -->
 <script setup>
+import ThemeToggler from "./ThemeToggler.vue";
 import { ref, onMounted } from "vue";
 
 const menuCounter = ref(false);
+const elementInViewPort = ref(0); // 0 = home, 1 = about
+
+onMounted(() => {
+  function isInViewPort(element, inViewPort) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          elementInViewPort.value = inViewPort;
+        }
+      });
+    });
+    observer.observe(element);
+  }
+
+  setInterval(() => {
+    const home = document.querySelector("#home");
+    const f = document.querySelector("#f");
+    isInViewPort(home, 0);
+    isInViewPort(f, 1);
+  }, 1000);
+});
 </script>
 <!-- end script -->
 
 <!-- template -->
 <template>
   <nav
-    class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow md:h-20 md:px-10"
+    class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 md:h-20 md:px-10 dark:bg-zinc-800"
   >
     <!-- logo and title -->
     <h1 class="font-semibold mt-1 text-2xl text-zinc-800">
-      Simple <span class="text-[#7c5c36] font-['Grandstander']">Wiki</span>
+      Simple <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
     </h1>
     <!-- logo and title -->
 
@@ -24,10 +46,7 @@ const menuCounter = ref(false);
           <a href="#">Home</a>
         </li>
         <li class="">
-          <a href="#">About API</a>
-        </li>
-        <li class="">
-          <a href="#">API Documentation</a>
+          <a href="#">About</a>
         </li>
         <li class="">
           <a href="#">Contact</a>
@@ -60,6 +79,8 @@ const menuCounter = ref(false);
         </svg>
         <!-- svg -->
       </a>
+      <ThemeToggler class="hidden md:block"></ThemeToggler>
+
       <button
         @click="menuCounter = !menuCounter"
         class="relative transition text-red-100 w-[30px] h-[30px] md:hidden"
@@ -96,15 +117,20 @@ const menuCounter = ref(false);
 
     <!-- menu list -->
     <div
-      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300 md:hidden"
+      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300 md:hidden flex flex-1"
       :class="menuCounter ? '_in' : '_out'"
     >
+      <div
+        class="w-full bg-transparent"
+        @click="menuCounter = !menuCounter"
+      ></div>
       <section
         role="menu_list"
         class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden"
         :class="menuCounter ? 'w-[80vw]' : 'w-0'"
       >
-        <header class="w-full h-16 flex justify-end items-center p-2.5">
+        <header class="w-full h-16 flex justify-between items-center p-2.5">
+          <ThemeToggler></ThemeToggler>
           <button
             @click="menuCounter = !menuCounter"
             class="w-[30px] h-[30px] text-xl flex justify-center items-center"
@@ -112,32 +138,29 @@ const menuCounter = ref(false);
             <i class="bi bi-box-arrow-right"></i>
           </button>
         </header>
-        <section class="@list mx-4 border-b-2 overflow-hidden">
+        <section class="@list mx-4 overflow-hidden">
           <ul class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800">
             <li class="">
-              <a href="#home" class="block w-full p-2 rounded-md bg-amber-100"
+              <a
+                href="#home"
+                class="block w-full p-2 rounded-md bg-zinc-100 transition-colors duration-300"
                 >Home</a
               >
             </li>
             <li class="">
-              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
+              <a href="#" class="block w-full p-2 rounded-md bg-zinc-50"
                 >Search</a
               >
             </li>
             <li class="">
-              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
-                >About API</a
+              <a href="#" class="block w-full p-2 rounded-md bg-zinc-50"
+                >About</a
               >
             </li>
             <li class="">
               <a
-                href="https://github.com/mudroljub/wikipedia-api-docs"
-                class="block w-full p-2 rounded-md bg-amber-100 underline text-blue-500"
-                >API Documentation (Wikipedia)</a
-              >
-            </li>
-            <li class="">
-              <a href="#" class="block w-full p-2 rounded-md bg-amber-100"
+                href="#"
+                class="block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300"
                 >Contact</a
               >
             </li>
