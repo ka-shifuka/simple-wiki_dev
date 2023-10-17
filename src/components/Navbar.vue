@@ -16,7 +16,7 @@
 <!-- template -->
 <template>
   <nav
-    class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 md:h-20 md:px-10 dark:bg-zinc-800 xl:px-[15%]"
+    class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 sm:h-20 sm:px-10 dark:bg-zinc-800 xl:px-[15%]"
   >
     <!-- logo and title -->
     <h1 class="font-semibold mt-1 text-2xl text-zinc-800">
@@ -31,13 +31,13 @@
     <section role="menu_list" class="hidden md:block">
       <ul class="flex gap-2">
         <li class="">
-          <a href="#">Home</a>
+          <a href="#" class="cursor-pointer">Home</a>
         </li>
         <li class="">
-          <a href="#">About</a>
+          <a href="#" class="cursor-pointer">About</a>
         </li>
         <li class="">
-          <a href="#">Contact</a>
+          <a href="#" class="cursor-pointer">Contact</a>
         </li>
       </ul>
     </section>
@@ -45,7 +45,10 @@
 
     <!-- menu and search -->
     <div class="flex justify-center items-center gap-1.5">
-      <a href="#" class="flex items-center justify-center w-[30px] h-[30px]">
+      <a
+        href="#"
+        class="flex items-center justify-center w-[30px] h-[30px] cursor-pointer"
+      >
         <!-- svg -->
         <svg
           viewBox="0 0 24 24"
@@ -70,7 +73,7 @@
 
       <button
         @click="menuCounter = !menuCounter"
-        class="relative transition text-red-100 w-[30px] h-[30px]"
+        class="relative transition text-red-100 w-[30px] h-[30px] cursor-pointer"
       >
         <!-- svg -->
         <svg
@@ -113,16 +116,18 @@
       ></div>
       <section
         role="menu_list"
-        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-[5%] md:top-16 xl:right-[15%]"
+        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-10 md:top-16 md:rounded-lg md:flex md:flex-row-reverse md:justify-between md:items-center xl:right-[15%] dark:bg-zinc-800"
         :class="
           menuCounter ? 'w-[80vw] md:w-[200px] md:h-[100px]' : 'w-0 md:h-[0]'
         "
       >
-        <header class="w-full h-16 flex justify-between items-center p-2.5">
+        <header
+          class="w-full h-16 flex justify-between items-center p-2.5 md:w-fit md:justify-end"
+        >
           <ThemeToggler :is-dark-mode="setDarkMode"></ThemeToggler>
           <button
             @click="menuCounter = !menuCounter"
-            class="w-[30px] h-[30px] text-xl flex justify-center items-center"
+            class="w-[30px] h-[30px] text-xl flex justify-center items-center cursor-pointer"
           >
             <i class="bi bi-box-arrow-right"></i>
           </button>
@@ -132,24 +137,28 @@
             <li class="">
               <a
                 href="#home"
-                class="block w-full p-2 rounded-md bg-zinc-100 transition-colors duration-300"
+                class="block w-full p-2 rounded-md bg-zinc-100 transition-colors duration-300 cursor-pointer"
                 >Home</a
               >
             </li>
             <li class="">
-              <a href="#" class="block w-full p-2 rounded-md bg-zinc-50"
+              <a
+                href="#"
+                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer"
                 >Search</a
               >
             </li>
             <li class="">
-              <a href="#" class="block w-full p-2 rounded-md bg-zinc-50"
+              <a
+                href="#"
+                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer"
                 >About</a
               >
             </li>
             <li class="">
               <a
                 href="#"
-                class="block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300"
+                class="block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300 cursor-pointer"
                 >Contact</a
               >
             </li>
@@ -159,23 +168,23 @@
         <!-- sosmed list -->
         <section
           role="sosmed_list "
-          class="h-10 p-4 flex justify-end items-center gap-1.5 text-xl"
+          class="h-10 p-4 flex justify-end items-center gap-1.5 text-xl md:text-2xl md:gap-2"
         >
           <a
             href="https://www.facebook.com/profile.php?id=100072780309432&mibextid=ZbWKwL"
-            class="bg-gradient-to-b from-blue-600 to-sky-600 bg-clip-text text-transparent"
+            class="bg-gradient-to-b from-blue-600 to-sky-600 bg-clip-text text-transparent cursor-pointer"
           >
             <i class="bi bi-facebook"></i>
           </a>
           <a
             href="https://instagram.com/arya_memes_dev?igshid=OGQ5ZDc2ODk2ZA=="
-            class="bg bg-gradient-to-tr from-blue-600 to-pink-600 bg-clip-text text-transparent"
+            class="bg bg-gradient-to-tr from-blue-600 to-pink-600 bg-clip-text text-transparent cursor-pointer"
           >
             <i class="bi bi-instagram"></i>
           </a>
           <a
             href="https://github.com/ka-shifuka"
-            class="bg-gradient-to-b from bg-zinc-800 to-black bg-clip-text text-transparent"
+            class="bg-gradient-to-b from bg-zinc-800 to-black bg-clip-text text-transparent cursor-pointer dark:from-zinc-200 dark:to-zinc-300"
           >
             <i class="bi bi-github"></i>
           </a>
