@@ -1,7 +1,7 @@
 <!-- script -->
 <script setup>
-import Navbar from "./components/Navbar.vue";
-import Jumbotron from "./components/Jumbotron.vue";
+  import Navbar from "./components/Navbar.vue";
+  import Jumbotron from "./components/Jumbotron.vue";
 </script>
 <!-- end script -->
 
@@ -12,17 +12,13 @@ import Jumbotron from "./components/Jumbotron.vue";
     <section>
       <header>
         <Navbar></Navbar>
-        <section class="w-0 h-0 mx-auto" id="home"></section>
-        <Jumbotron></Jumbotron>
+        <Jumbotron id="home"></Jumbotron>
       </header>
     </section>
     <!-- main header page -->
 
     <!-- fotter page -->
-    <section class="h-[200vh]">
-      <div id="f"></div>
-      footer
-    </section>
+    <section class="h-[200vh]">footer</section>
     <!-- fotter page -->
   </div>
 </template>

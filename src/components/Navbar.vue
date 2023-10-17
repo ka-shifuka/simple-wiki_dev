@@ -1,30 +1,15 @@
 <!-- script -->
 <script setup>
-import ThemeToggler from "./ThemeToggler.vue";
-import { ref, onMounted } from "vue";
+  import ThemeToggler from "./ThemeToggler.vue";
+  import { ref } from "vue";
 
-const menuCounter = ref(false);
-const elementInViewPort = ref(0); // 0 = home, 1 = about
+  const menuCounter = ref(false);
+  const elementInViewPort = ref(0); // 0 = home, 1 = about
+  const isDarkMode = ref(false);
 
-onMounted(() => {
-  function isInViewPort(element, inViewPort) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          elementInViewPort.value = inViewPort;
-        }
-      });
-    });
-    observer.observe(element);
+  function setDarkMode(value) {
+    isDarkMode.value = value;
   }
-
-  setInterval(() => {
-    const home = document.querySelector("#home");
-    const f = document.querySelector("#f");
-    isInViewPort(home, 0);
-    isInViewPort(f, 1);
-  }, 1000);
-});
 </script>
 <!-- end script -->
 
@@ -35,7 +20,8 @@ onMounted(() => {
   >
     <!-- logo and title -->
     <h1 class="font-semibold mt-1 text-2xl text-zinc-800">
-      Simple <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
+      Simple
+      <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
     </h1>
     <!-- logo and title -->
 
@@ -61,7 +47,7 @@ onMounted(() => {
         <!-- svg -->
         <svg
           viewBox="0 0 24 24"
-          fill="hsl(217, 32.6%, 17.5%)"
+          :fill="!isDarkMode ? 'hsl(217, 32.6%, 17.5%)' : 'hsl(240, 5.9%, 90%)'"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -79,7 +65,10 @@ onMounted(() => {
         </svg>
         <!-- svg -->
       </a>
-      <ThemeToggler class="hidden md:block"></ThemeToggler>
+      <ThemeToggler
+        :is-dark-mode="setDarkMode"
+        class="hidden md:block"
+      ></ThemeToggler>
 
       <button
         @click="menuCounter = !menuCounter"
@@ -88,7 +77,7 @@ onMounted(() => {
         <!-- svg -->
         <svg
           viewBox="0 0 28 28"
-          fill="hsl(217, 32.6%, 17.5%)"
+          :fill="!isDarkMode ? 'hsl(217, 32.6%, 17.5%)' : 'hsl(240, 5.9%, 90%)'"
           xmlns="http://www.w3.org/2000/svg"
           transform="rotate(180)"
         >
@@ -130,7 +119,7 @@ onMounted(() => {
         :class="menuCounter ? 'w-[80vw]' : 'w-0'"
       >
         <header class="w-full h-16 flex justify-between items-center p-2.5">
-          <ThemeToggler></ThemeToggler>
+          <ThemeToggler :is-dark-mode="setDarkMode"></ThemeToggler>
           <button
             @click="menuCounter = !menuCounter"
             class="w-[30px] h-[30px] text-xl flex justify-center items-center"
@@ -175,44 +164,46 @@ onMounted(() => {
 
 <!-- style -->
 <style scoped>
-._in {
-  animation-name: in;
-  animation-duration: 400ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-}
-._out {
-  animation-name: out;
-  animation-duration: 400ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-}
+  ._in {
+    animation-name: in;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+  ._out {
+    animation-name: out;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
 
-@keyframes in {
-  0% {
-    width: 100vw;
+  @keyframes in {
+    0% {
+      width: 100vw;
+      backdrop-filter: blur(1px);
+    }
+    50% {
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(1px);
+    }
+    100% {
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(1px);
+    }
   }
-  50% {
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
+  @keyframes out {
+    0% {
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    99% {
+      width: 100vw;
+    }
+    100% {
+      width: 0vw;
+    }
   }
-  100% {
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(1px);
-  }
-}
-@keyframes out {
-  0% {
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    width: 100vw;
-  }
-  100% {
-    width: 0vw;
-  }
-}
 </style>
 <!-- end style -->
