@@ -16,7 +16,7 @@
 <!-- template -->
 <template>
   <nav
-    class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 md:h-20 md:px-10 dark:bg-zinc-800"
+    class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 md:h-20 md:px-10 dark:bg-zinc-800 xl:px-[15%]"
   >
     <!-- logo and title -->
     <h1 class="font-semibold mt-1 text-2xl text-zinc-800">
@@ -24,6 +24,8 @@
       <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
     </h1>
     <!-- logo and title -->
+
+    <div class="hidden lg:block"></div>
 
     <!-- menu list in md screen -->
     <section role="menu_list" class="hidden md:block">
@@ -65,14 +67,10 @@
         </svg>
         <!-- svg -->
       </a>
-      <ThemeToggler
-        :is-dark-mode="setDarkMode"
-        class="hidden md:block"
-      ></ThemeToggler>
 
       <button
         @click="menuCounter = !menuCounter"
-        class="relative transition text-red-100 w-[30px] h-[30px] md:hidden"
+        class="relative transition text-red-100 w-[30px] h-[30px]"
       >
         <!-- svg -->
         <svg
@@ -106,7 +104,7 @@
 
     <!-- menu list -->
     <div
-      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300 md:hidden flex flex-1"
+      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300 flex flex-1"
       :class="menuCounter ? '_in' : '_out'"
     >
       <div
@@ -115,8 +113,10 @@
       ></div>
       <section
         role="menu_list"
-        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden"
-        :class="menuCounter ? 'w-[80vw]' : 'w-0'"
+        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-[5%] md:top-16 xl:right-[15%]"
+        :class="
+          menuCounter ? 'w-[80vw] md:w-[200px] md:h-[100px]' : 'w-0 md:h-[0]'
+        "
       >
         <header class="w-full h-16 flex justify-between items-center p-2.5">
           <ThemeToggler :is-dark-mode="setDarkMode"></ThemeToggler>
@@ -127,8 +127,8 @@
             <i class="bi bi-box-arrow-right"></i>
           </button>
         </header>
-        <section class="@list mx-4 overflow-hidden">
-          <ul class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800">
+        <section class="@list mx-4 overflow-hidden md:hidden">
+          <ul class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800 text-sm">
             <li class="">
               <a
                 href="#home"
@@ -155,6 +155,32 @@
             </li>
           </ul>
         </section>
+
+        <!-- sosmed list -->
+        <section
+          role="sosmed_list "
+          class="h-10 p-4 flex justify-end items-center gap-1.5 text-xl"
+        >
+          <a
+            href="https://www.facebook.com/profile.php?id=100072780309432&mibextid=ZbWKwL"
+            class="bg-gradient-to-b from-blue-600 to-sky-600 bg-clip-text text-transparent"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            href="https://instagram.com/arya_memes_dev?igshid=OGQ5ZDc2ODk2ZA=="
+            class="bg bg-gradient-to-tr from-blue-600 to-pink-600 bg-clip-text text-transparent"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            href="https://github.com/ka-shifuka"
+            class="bg-gradient-to-b from bg-zinc-800 to-black bg-clip-text text-transparent"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+        </section>
+        <!-- sosmed list -->
       </section>
     </div>
     <!-- menu list -->
