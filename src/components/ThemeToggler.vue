@@ -13,20 +13,20 @@
 
   // theme system
   const html = document.querySelector("html");
-  let interval;
+  let interval = null;
   function setDark(count) {
     clearInterval(interval);
     html.classList.add("dark");
     togglerCounter.value = count;
-    setSession(count);
     props.isDarkMode(true);
+    setSession(count);
   }
   function setLight(count) {
     clearInterval(interval);
     html.classList.remove("dark");
     togglerCounter.value = count;
-    setSession(count);
     props.isDarkMode(false);
+    setSession(count);
   }
   function setDefaultSys(count) {
     interval = setInterval(function () {
@@ -40,13 +40,12 @@
         html.classList.remove("dark");
         props.isDarkMode(false);
       }
-      console.log("q");
     }, 200);
     togglerCounter.value = count;
     setSession(count);
   }
 
-  let isMounted = ref(false); // This is to fix a bug where the name mounted is run 2 times instead of once
+  let isMounted = false; // This is to fix a bug where the name mounted is run 2 times instead of once
   onMounted(() => {
     if (!isMounted.value) {
       if (sessionStorage.getItem(SESION_DATA)) {
@@ -55,8 +54,7 @@
         if (data === 1) setDark(1);
         if (data === 2) setDefaultSys(2);
       }
-      console.log("a");
-      isMounted.value = true;
+      isMounted = true;
     }
   });
 </script>

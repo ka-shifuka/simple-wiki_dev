@@ -19,17 +19,18 @@
     class="@navbar z-10 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 sm:h-20 sm:px-10 dark:bg-zinc-800 xl:px-[15%]"
   >
     <!-- logo and title -->
-    <h1 class="font-semibold mt-1 text-2xl text-zinc-800">
+    <h1 class="font-semibold mt-1 text-2xl text-zinc-800 dark:text-zinc-200">
       Simple
       <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
     </h1>
     <!-- logo and title -->
-
+    <div class="hidden xl:block"></div>
+    <div class="hidden lg:block"></div>
     <div class="hidden lg:block"></div>
 
     <!-- menu list in md screen -->
     <section role="menu_list" class="hidden md:block">
-      <ul class="flex gap-2">
+      <ul class="flex gap-2 dark:text-zinc-200">
         <li class="">
           <a href="#" class="cursor-pointer">Home</a>
         </li>
@@ -127,7 +128,7 @@
           <ThemeToggler :is-dark-mode="setDarkMode"></ThemeToggler>
           <button
             @click="menuCounter = !menuCounter"
-            class="w-[30px] h-[30px] text-xl flex justify-center items-center cursor-pointer"
+            class="w-[30px] h-[30px] text-xl flex justify-center items-center cursor-pointer dark:text-zinc-200"
           >
             <i class="bi bi-box-arrow-right"></i>
           </button>
