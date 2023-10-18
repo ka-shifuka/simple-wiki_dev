@@ -32,13 +32,25 @@
     <section role="menu_list" class="hidden md:block">
       <ul class="flex gap-2 dark:text-zinc-200">
         <li class="">
-          <a href="#" class="cursor-pointer">Home</a>
+          <a
+            href="#"
+            class="cursor-pointer transition-colors duration-300 p-1 rounded hover:text-zinc-600 dark:hover:text-zinc-400"
+            >Home</a
+          >
         </li>
         <li class="">
-          <a href="#" class="cursor-pointer">About</a>
+          <a
+            href="#"
+            class="cursor-pointer transition-colors duration-300 p-1 rounded hover:text-zinc-600 dark:hover:text-zinc-400"
+            >About</a
+          >
         </li>
         <li class="">
-          <a href="#" class="cursor-pointer">Contact</a>
+          <a
+            href="#"
+            class="cursor-pointer transition-colors duration-300 p-1 rounded hover:text-zinc-600 dark:hover:text-zinc-400"
+            >Contact</a
+          >
         </li>
       </ul>
     </section>
@@ -117,7 +129,7 @@
       ></div>
       <section
         role="menu_list"
-        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-10 md:top-16 md:rounded-lg md:flex md:flex-row-reverse md:justify-between md:items-center xl:right-[15%] dark:bg-zinc-800"
+        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-10 md:top-16 md:rounded-lg md:flex md:flex-row-reverse md:justify-between md:items-center md:relative xl:right-[15%] dark:bg-zinc-800"
         :class="
           menuCounter ? 'w-[80vw] md:w-[200px] md:h-[100px]' : 'w-0 md:h-[0]'
         "
@@ -128,9 +140,10 @@
           <ThemeToggler :is-dark-mode="setDarkMode"></ThemeToggler>
           <button
             @click="menuCounter = !menuCounter"
-            class="w-[30px] h-[30px] text-xl flex justify-center items-center cursor-pointer dark:text-zinc-200"
+            class="w-[30px] h-[30px] text-xl flex justify-center items-center cursor-pointer md:absolute md:top-1 md:right-1 dark:text-zinc-200"
           >
-            <i class="bi bi-box-arrow-right"></i>
+            <i class="bi bi-box-arrow-right md:hidden"></i>
+            <i class="bi bi-x hidden md:block"></i>
           </button>
         </header>
         <section class="@list mx-4 overflow-hidden md:hidden">
@@ -171,7 +184,7 @@
         <!-- sosmed list -->
         <section
           role="sosmed_list "
-          class="h-10 p-4 flex justify-end items-center gap-1.5 text-xl md:text-2xl md:gap-2"
+          class="h-10 p-4 flex justify-end items-center gap-1.5 text-xl md:text-2xl md:gap-2 md:px-2.5"
         >
           <a
             href="https://www.facebook.com/profile.php?id=100072780309432&mibextid=ZbWKwL"

@@ -1,9 +1,9 @@
 <!-- script -->
 <script setup>
   import { ref, onMounted } from "vue";
+  const SESION_DATA = "SYSTME_THEME_QWERTY#1";
 
   const togglerCounter = ref(0); // 0 = light, 1 = dark, 2 = system
-  const SESION_DATA = "SYSTME_THEME_QWERTY#1";
   const props = defineProps(["isDarkMode"]);
 
   //set data of Theme mode to sesionStorage
