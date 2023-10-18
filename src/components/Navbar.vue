@@ -134,32 +134,34 @@
           </button>
         </header>
         <section class="@list mx-4 overflow-hidden md:hidden">
-          <ul class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800 text-sm">
+          <ul
+            class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800 text-sm dark:text-zinc-200"
+          >
             <li class="">
               <a
                 href="#home"
-                class="block w-full p-2 rounded-md bg-zinc-100 transition-colors duration-300 cursor-pointer"
+                class="block w-full p-2 rounded-md bg-zinc-100 cursor-pointer transition-colors duration-300 dark:bg-zinc-950"
                 >Home</a
               >
             </li>
             <li class="">
               <a
                 href="#"
-                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer"
+                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
                 >Search</a
               >
             </li>
             <li class="">
               <a
                 href="#"
-                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer"
+                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
                 >About</a
               >
             </li>
             <li class="">
               <a
                 href="#"
-                class="block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300 cursor-pointer"
+                class="block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300 cursor-pointer dark:bg-zinc-900"
                 >Contact</a
               >
             </li>
