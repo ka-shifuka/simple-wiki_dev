@@ -5,7 +5,7 @@
 <!-- template -->
 <template>
   <div
-    class="@container w-screen h-[100vh] bg-no-repeat bg-cover brightness-75 flex flex-col justify-center"
+    class="@container w-screen h-[100vh] bg-no-repeat bg-cover brightness-[.80] flex flex-col justify-center"
     style="background-image: url(&quot;/background.jpeg&quot;)"
   >
     <div
@@ -17,12 +17,12 @@
             Welcome to Simple
             <span class="text-yellow-500 font-['Grandstander']">Wiki</span>
           </h1>
-          <p class="text-zinc-200">
+          <p class="text-zinc-100 text-sm">
             simpel wiki adalah aplikasi pencarian sederhana yang terintregasi
             dengan
             <a
               href="https://github.com/mudroljub/wikipedia-api-docs"
-              class="text-blue-500 underline"
+              class="text-blue-400 underline"
               >API Wikipedia</a
             >
           </p>

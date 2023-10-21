@@ -2,6 +2,7 @@
 <script setup>
   import Navbar from "./components/Navbar.vue";
   import Jumbotron from "./components/Jumbotron.vue";
+  import Search from "./components/Search.vue";
 </script>
 <!-- end script -->
 
@@ -14,11 +15,14 @@
         <Navbar></Navbar>
         <Jumbotron id="home"></Jumbotron>
       </header>
+      <main>
+        <Search></Search>
+      </main>
     </section>
     <!-- main header page -->
 
     <!-- fotter page -->
-    <section class="h-[200vh]">footer</section>
+    <section class="">footer</section>
     <!-- fotter page -->
   </div>
 </template>
