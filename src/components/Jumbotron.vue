@@ -2,24 +2,33 @@
 <script setup></script>
 <!-- end script -->
 
-<!-- template -->
+<!-- 
+    style="background-image: url(&quot;/background.jpeg&quot;)"
+template -->
 <template>
   <div
-    class="@container w-screen h-[100vh] bg-no-repeat bg-cover brightness-[.80] flex flex-col justify-center"
-    style="background-image: url(&quot;/background.jpeg&quot;)"
+    class="@container relative w-screen h-[100vh] bg-no-repeat bg-cover flex flex-col justify-center"
+    style="
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          hsl(240, 3.7%, 15.9%)
+        ),
+        url(&quot;/background.jpeg&quot;);
+    "
   >
     <div
       class="mx-4 sm:mx-10 xl:mx-[15%] flex flex-col justify-center gap-5 sm:flex-row sm:justify-between"
     >
       <div class="sm:w-[300px] flex flex-col justify-center gap-4">
+        <!-- header -->
         <header class="">
           <h1 class="font-semibold mt-1 text-2xl text-zinc-100">
             Welcome to Simple
             <span class="text-yellow-500 font-['Grandstander']">Wiki</span>
           </h1>
-          <p class="text-zinc-100 text-sm">
-            simpel wiki adalah aplikasi pencarian sederhana yang terintregasi
-            dengan
+          <p class="text-zinc-200 text-[12px]">
+            simpel wiki adalah aplikasi pencarian sederhana berbasis web yang
+            sangat mudah digunakan yang terintregasi dengan
             <a
               href="https://github.com/mudroljub/wikipedia-api-docs"
               class="text-blue-400 underline"
@@ -27,19 +36,28 @@
             >
           </p>
         </header>
+        <!-- header -->
+
+        <!-- main -->
         <main>
-          <div class="flex gap-2 text-zinc-800 font-semibold">
+          <div class="flex gap-2 text-zinc-800 font-semibold text-sm">
             <a href="" class="p-2 rounded-lg bg-yellow-500">Github</a>
-            <a href="" class="p-2 rounded-lg bg-yellow-500">About creator</a>
           </div>
         </main>
+        <!-- main -->
       </div>
 
+      <!-- encathanted table -->
       <div
         class="hidden md:w-[200px] sm:flex sm:justify-center sm:items-center drop-shadow-2xl"
       >
-        <img class="w-40 h-fit up-down" src="/books.png" alt="books" />
+        <img
+          class="w-40 h-fit up-down drop-shadow-[0_35px_15px_rgba(0,0,0,0.5)]"
+          src="/books.png"
+          alt="books"
+        />
       </div>
+      <!-- encathanted table -->
     </div>
   </div>
 </template>

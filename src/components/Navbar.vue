@@ -30,7 +30,7 @@
 
     <!-- menu list in md screen -->
     <section role="menu_list" class="hidden md:block">
-      <ul class="flex gap-2 dark:text-zinc-200">
+      <ul class="flex gap-2 text-sm dark:text-zinc-200">
         <li class="">
           <a
             href="#"
@@ -131,7 +131,7 @@
         role="menu_list"
         class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-10 md:top-16 md:rounded-lg md:flex md:flex-row-reverse md:justify-between md:items-center md:relative xl:right-[15%] dark:bg-zinc-800"
         :class="
-          menuCounter ? 'w-[80vw] md:w-[200px] md:h-[100px]' : 'w-0 md:h-[0]'
+          menuCounter ? 'w-[80vw] md:w-[300px] md:h-[100px]' : 'w-0 md:h-[0]'
         "
       >
         <header
@@ -148,7 +148,7 @@
         </header>
         <section class="@list mx-4 overflow-hidden md:hidden">
           <ul
-            class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800 text-sm dark:text-zinc-200"
+            class="w-[100%] flex flex-col gap-1 pb-1 text-zinc-800 text-[12px] dark:text-zinc-200"
           >
             <li class="">
               <a
@@ -184,7 +184,7 @@
         <!-- sosmed list -->
         <section
           role="sosmed_list "
-          class="h-10 p-4 flex justify-end items-center gap-1.5 text-xl md:text-2xl md:gap-2 md:px-2.5"
+          class="w-fit h-10 p-4 flex justify-end items-center gap-1.5 text-xl md:text-2xl md:gap-2 md:px-2.5"
         >
           <a
             href="https://www.facebook.com/profile.php?id=100072780309432&mibextid=ZbWKwL"
@@ -206,6 +206,15 @@
           </a>
         </section>
         <!-- sosmed list -->
+
+        <!-- encathing table -->
+        <div class="h-[50%] flex justify-center items-center">
+          <img
+            class="w-32 h-32 up-down drop-shadow-[0_35px_15px_rgba(0,0,0,0.5)]"
+            src="/books.png"
+            alt=""
+          />
+        </div>
       </section>
     </div>
     <!-- menu list -->
@@ -254,6 +263,22 @@
     }
     100% {
       width: 0vw;
+    }
+  }
+
+  .up-down {
+    animation: upDown 5s infinite;
+  }
+
+  @keyframes upDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 </style>
