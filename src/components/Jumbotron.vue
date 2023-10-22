@@ -7,12 +7,9 @@
 template -->
 <template>
   <div
-    class="@container relative w-screen h-[100vh] bg-no-repeat bg-cover flex flex-col justify-center"
+    class="@container relative w-screen h-[100vh] bg-no-repeat bg-cover bg-right flex flex-col justify-center bg-fixed bg"
     style="
-      background-image: linear-gradient(
-          rgba(0, 0, 0, 0.3),
-          hsl(240, 3.7%, 15.9%)
-        ),
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
         url(&quot;/background.jpeg&quot;);
     "
   >
