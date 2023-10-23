@@ -1,5 +1,18 @@
 <!-- script -->
-<script setup></script>
+<script setup>
+  import { ref, onMounted } from "vue";
+
+  onMounted(() => {
+    const background = document.querySelector("#background-image");
+
+    setInterval(() => {
+      const winY = window.scrollY;
+      let offset = winY / 10;
+
+      background.style.transform = `translate(0px, -${offset}px)`;
+    }, 100);
+  });
+</script>
 <!-- end script -->
 
 <!-- 
@@ -12,7 +25,8 @@ template -->
   >
     <!-- background-image -->
     <div
-      class="w-screen h-[100vh] fixed bg-no-repeat bg-cover bg-right -z-[100]"
+      id="background-image"
+      class="w-screen h-[100vh] transition-all duration-300 fixed bg-no-repeat bg-cover bg-right -z-[100]"
       style="
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),
