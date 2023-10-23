@@ -6,6 +6,7 @@
   font-family: "Open sans", Sans-Serif;
   -webkit-tap-highlight-color: transparent;
   -moz-tap-highlight-color: transparent;
+  scroll-margin-top: 8rem;
 }
 
 html {

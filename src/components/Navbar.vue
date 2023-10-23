@@ -16,7 +16,7 @@
 <!-- template -->
 <template>
   <nav
-    class="@navbar z-50 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 sm:h-20 sm:px-10 dark:bg-zinc-800 xl:px-[15%]"
+    class="@navbar z-50 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 sm:h-20 sm:px-10 dark:bg-zinc-800 xl:px-[10%]"
   >
     <!-- logo and title -->
     <h1 class="font-semibold mt-1 text-2xl text-zinc-800 dark:text-zinc-200">
@@ -59,7 +59,7 @@
     <!-- menu and search -->
     <div class="flex justify-center items-center gap-1.5">
       <a
-        href="#"
+        href="#search"
         class="flex items-center justify-center w-[30px] h-[30px] cursor-pointer"
       >
         <!-- svg -->
@@ -129,7 +129,7 @@
       ></div>
       <section
         role="menu_list"
-        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-10 md:top-16 md:rounded-lg md:flex md:flex-row-reverse md:justify-between md:items-center md:relative xl:right-[15%] dark:bg-zinc-800"
+        class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-10 md:top-16 md:rounded-lg md:flex md:flex-row-reverse md:justify-between md:items-center md:relative xl:right-[10%] dark:bg-zinc-800"
         :class="
           menuCounter ? 'w-[80vw] md:w-[300px] md:h-[100px]' : 'w-0 md:h-[0]'
         "
@@ -159,7 +159,7 @@
             </li>
             <li class="">
               <a
-                href="#"
+                href="#search"
                 class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
                 >Search</a
               >
@@ -208,7 +208,7 @@
         <!-- sosmed list -->
 
         <!-- encathing table -->
-        <div class="h-[50%] flex justify-center items-center">
+        <div class="h-[50%] flex justify-center items-center md:hidden">
           <img
             class="w-32 h-32 up-down drop-shadow-[0_35px_15px_rgba(0,0,0,0.5)]"
             src="/books.png"

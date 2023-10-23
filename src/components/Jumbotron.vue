@@ -7,14 +7,25 @@
 template -->
 <template>
   <div
-    class="@container relative w-screen h-[100vh] bg-no-repeat bg-cover bg-right flex flex-col justify-center bg-fixed bg"
-    style="
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-        url(&quot;/background.jpeg&quot;);
-    "
+    id="home"
+    class="@container relative w-screen h-[100vh] flex flex-col justify-center bg-fixed bg"
   >
+    <!-- background-image -->
     <div
-      class="mx-4 sm:mx-10 xl:mx-[15%] flex flex-col justify-center gap-5 sm:flex-row sm:justify-between"
+      class="w-screen h-[100vh] fixed bg-no-repeat bg-cover bg-right -z-[100]"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url(&quot;/background.jpeg&quot;);
+      "
+    ></div>
+    <!-- background-image -->
+
+    <!-- main -->
+    <div
+      class="mx-4 sm:mx-10 xl:mx-[10%] flex flex-col justify-center gap-5 sm:flex-row sm:justify-between"
     >
       <div class="sm:w-[300px] flex flex-col justify-center gap-4">
         <!-- header -->
@@ -56,6 +67,7 @@ template -->
       </div>
       <!-- encathanted table -->
     </div>
+    <!-- main -->
   </div>
 </template>
 <!-- end template -->

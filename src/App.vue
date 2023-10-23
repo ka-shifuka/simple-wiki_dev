@@ -13,7 +13,7 @@
     <section>
       <header>
         <Navbar></Navbar>
-        <Jumbotron id="home"></Jumbotron>
+        <Jumbotron></Jumbotron>
       </header>
       <main>
         <Search></Search>
@@ -22,7 +22,7 @@
     <!-- main header page -->
 
     <!-- fotter page -->
-    <section class="">footer</section>
+    <section class="bg-white">footer</section>
     <!-- fotter page -->
   </div>
 </template>
