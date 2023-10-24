@@ -24,7 +24,7 @@ template -->
     <!-- background-image -->
     <div
       id="background-image"
-      class="w-screen h-[100vh] transition-all duration-[150ms] fixed bg-no-repeat bg-cover bg-left -z-[100]"
+      class="w-screen h-[100vh] transition-all duration-[150ms] fixed bg-no-repeat bg-cover bg-center -z-[100]"
       style="
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),
