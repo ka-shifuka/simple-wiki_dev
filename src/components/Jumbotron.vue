@@ -4,13 +4,11 @@
 
   onMounted(() => {
     const background = document.querySelector("#background-image");
-
     setInterval(() => {
-      const winY = window.scrollY;
-      let offset = winY / 10;
-
-      background.style.transform = `translate(0px, -${offset}px)`;
-    }, 100);
+      const count = Math.floor(window.scrollY / 5);
+      background.style.transform = `translate(0, -${count}px)`;
+      background.style.scale = 1 + count / 2000;
+    }, 10);
   });
 </script>
 <!-- end script -->
@@ -26,7 +24,7 @@ template -->
     <!-- background-image -->
     <div
       id="background-image"
-      class="w-screen h-[100vh] transition-all duration-300 fixed bg-no-repeat bg-cover bg-right -z-[100]"
+      class="w-screen h-[100vh] transition-all duration-[150ms] fixed bg-no-repeat bg-cover bg-left -z-[100]"
       style="
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),

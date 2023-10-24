@@ -210,7 +210,7 @@
         <!-- encathing table -->
         <div class="h-[50%] flex justify-center items-center md:hidden">
           <img
-            class="w-32 h-32 up-down drop-shadow-[0_35px_15px_rgba(0,0,0,0.5)]"
+            class="w-32 h-32 up-down drop-shadow-[0px_35px_10px_rgba(0,0,0,0.4)]"
             src="/books.png"
           />
         </div>
