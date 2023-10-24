@@ -23,7 +23,7 @@
           data.value = {};
           return;
         }
-      }, 10);
+      }, 50);
 
       try {
         const search = searchBar.value;
@@ -66,10 +66,7 @@
             return 0;
           });
         }
-
-        //error-property
         errProp.classList.add("hidden");
-        console.log(query, filterQuery);
       } catch (err) {
         errProp.classList.remove("hidden");
       }
@@ -82,29 +79,28 @@
 <!-- template -->
 <template>
   <div
-    class="@Search px-4 sm:px-10 xl:px-[10%] py-10 min-h-screen bg-white rounded-t-2xl dark:bg-zinc-900"
+    class="@Search px-4 sm:px-10 xl:px-[10%] py-10 min-h-[500px] bg-white rounded-t-2xl dark:bg-zinc-900"
   >
     <div class="w-full h-20 flex justify-center items-center">
       <!-- form and input search -->
-      <form
-        class="text-sm relative flex items-center"
-        action="javascript:void(0)"
-        method="get"
-        accept-charset="utf-8"
-        id="search"
-      >
+      <div class="text-sm relative flex items-center" id="search">
         <input
-          class="border-2 border-zinc-200 p-2 w-[250px] rounded-lg focus:outline-none md:w-[500px] dark:bg-zinc-800 dark:text-zinc-400 dark:border-zinc-700"
+          class="border-2 border-zinc-200 p-2 w-[250px] rounded-lg focus:outline-none md:w-[500px] dark:bg-zinc-800 dark:text-zinc-500 dark:border-[hsl(240,15%,15.9%)]"
           type="text"
           id="search_bar"
           placeholder="Search something like 'arya'"
         />
         <i class="bi bi-search absolute right-3 text-zinc-400"></i>
-      </form>
+        <p
+          class="text-zinc-400 text-[8px] absolute bottom-[-18px] right-0 dark:text-zinc-700"
+        >
+          !Tips jika query tidak sesuai ketik enter dua kali.
+        </p>
+      </div>
       <!-- form and input search -->
     </div>
     <div class="relative w-[] min-h-[300px]">
-      <!-- l'oad property -->
+      <!-- load property -->
       <div
         v-if="isLoad"
         class="w-full h-full bg-white absolute z-10 top-0 left-0 flex justify-center items-center dark:bg-zinc-900"

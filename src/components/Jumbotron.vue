@@ -42,11 +42,11 @@ template -->
       <div class="sm:w-[300px] flex flex-col justify-center gap-4">
         <!-- header -->
         <header class="">
-          <h1 class="font-semibold mt-1 text-2xl text-zinc-100">
+          <h1 class="font-semibold mt-1 text-2xl text-zinc-100 tracking-wide">
             Welcome to Simple
             <span class="text-yellow-500 font-['Grandstander']">Wiki</span>
           </h1>
-          <p class="text-zinc-200 text-[12px]">
+          <p class="text-zinc-200 text-[12px] tracking-tighter">
             simpel wiki adalah aplikasi pencarian sederhana berbasis web yang
             sangat mudah digunakan yang terintregasi dengan
             <a

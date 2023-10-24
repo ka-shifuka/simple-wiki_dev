@@ -33,21 +33,21 @@
       <ul class="flex gap-2 text-sm dark:text-zinc-200">
         <li class="">
           <a
-            href="#"
+            href="#home"
             class="cursor-pointer transition-colors duration-300 p-1 rounded hover:text-zinc-600 dark:hover:text-zinc-400"
             >Home</a
           >
         </li>
         <li class="">
           <a
-            href="#"
+            href="#about"
             class="cursor-pointer transition-colors duration-300 p-1 rounded hover:text-zinc-600 dark:hover:text-zinc-400"
             >About</a
           >
         </li>
         <li class="">
           <a
-            href="#"
+            href="#contact"
             class="cursor-pointer transition-colors duration-300 p-1 rounded hover:text-zinc-600 dark:hover:text-zinc-400"
             >Contact</a
           >
@@ -166,14 +166,14 @@
             </li>
             <li class="">
               <a
-                href="#"
+                href="#about"
                 class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
                 >About</a
               >
             </li>
             <li class="">
               <a
-                href="#"
+                href="#contact"
                 class="block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300 cursor-pointer dark:bg-zinc-900"
                 >Contact</a
               >
