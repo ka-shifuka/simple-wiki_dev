@@ -14,17 +14,17 @@
       isLoad.value = true;
       data.value = {};
     });
+    setInterval(() => {
+      if (searchBar.value === "") {
+        errProp.classList.remove("hidden");
+        isLoad.value = false;
+        data.value = {};
+        return;
+      }
+    }, 50);
 
     // get data from wikipedia
     searchBar.addEventListener("keyup", async () => {
-      setInterval(() => {
-        if (searchBar.value === "") {
-          isLoad.value = false;
-          data.value = {};
-          return;
-        }
-      }, 50);
-
       try {
         const search = searchBar.value;
         const url = `https://id.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${search}&exintro=&prop=extracts%7Cpageimages&pithumbsize=600&format=json&origin=*`;

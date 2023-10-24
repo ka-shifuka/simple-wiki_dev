@@ -1,6 +1,6 @@
 <!-- script -->
 <script setup>
-  import { ref, onMounted } from "vue";
+  import { onMounted } from "vue";
 
   onMounted(() => {
     const background = document.querySelector("#background-image");
@@ -61,7 +61,9 @@ template -->
         <!-- main -->
         <main>
           <div class="flex gap-2 text-zinc-800 font-semibold text-sm">
-            <a href="" class="p-2 rounded-lg bg-yellow-500">Github</a>
+            <a href="" class="p-2 rounded-lg bg-yellow-500 tracking-wide"
+              >Github</a
+            >
           </div>
         </main>
         <!-- main -->
