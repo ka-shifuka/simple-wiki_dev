@@ -132,36 +132,41 @@
         >
           <div
             v-for="i in data"
-            class="my-5 rounded-lg bg-zinc-100 p-5 md:w-[600px] md:max-h-[500px] md:overflow-scroll lg:w-[400px] xl:w-[500px] dark:bg-zinc-800 dark:text-zinc-200"
+            class="my-5 rounded-lg bg-zinc-100 p-5 flex flex-col justify-between md:w-[350px] md:max-h-[400px] md:overflow-scroll dark:bg-zinc-800 dark:text-zinc-200"
           >
-            <header class="flex justify-between mb-2">
-              <p v-if="isNotValid" class="text-[10px] text-rose-800">
-                hasil mungkin tidak sesuai
-              </p>
-              <div></div>
-              <p v-if="!i.thumbnail" class="text-[10px] text-rose-800">
-                tidak ada gambar!!
-              </p>
-            </header>
-            <main>
-              <div v-if="i.thumbnail" class="relative flex justify-center">
-                <img
-                  class="relative my-2 rounded-lg bg-transparent"
-                  :src="i.thumbnail.source"
-                  alt="thumbnail"
-                  loading="lazy"
-                  fetchpriority="high"
-                />
-              </div>
-              <p class="text-[12px] indent-3" v-html="i.extract"></p>
-            </main>
-            <footer class="p-4 w-full h-10 flex justify-end">
-              <a
-                class="text-blue-500 text-[10px] underline"
-                :href="`https://id.m.wikipedia.org/wiki/${i.title}`"
-                >lihat di wikipedia</a
-              >
-            </footer>
+            <div>
+              <header class="flex justify-between mb-2">
+                <p v-if="isNotValid" class="text-[10px] text-rose-800">
+                  hasil mungkin tidak sesuai
+                </p>
+                <div></div>
+                <p v-if="!i.thumbnail" class="text-[10px] text-rose-800">
+                  tidak ada gambar!!
+                </p>
+              </header>
+              <main>
+                <div v-if="i.thumbnail" class="relative flex justify-center">
+                  <img
+                    class="relative my-2 rounded-lg bg-transparent"
+                    :src="i.thumbnail.source"
+                    alt="thumbnail"
+                    loading="lazy"
+                    fetchpriority="high"
+                  />
+                </div>
+                <p class="text-[12px] indent-3" v-html="i.extract"></p>
+              </main>
+            </div>
+
+            <div>
+              <footer class="p-4 w-full h-10 flex justify-end">
+                <a
+                  class="text-blue-500 text-[10px] underline"
+                  :href="`https://id.m.wikipedia.org/wiki/${i.title}`"
+                  >lihat di wikipedia</a
+                >
+              </footer>
+            </div>
           </div>
         </div>
       </div>
