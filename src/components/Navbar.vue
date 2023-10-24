@@ -16,7 +16,7 @@
 <!-- template -->
 <template>
   <nav
-    class="@navbar z-50 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 sm:h-20 sm:px-10 dark:bg-zinc-800 xl:px-[10%]"
+    class="@Navbar z-50 fixed top-0 right-0 bg-white w-screen h-16 flex justify-between items-center p-2.5 shadow transition-colors duration-300 sm:h-20 sm:px-10 dark:bg-zinc-800 xl:px-[10%]"
   >
     <!-- logo and title -->
     <h1 class="font-semibold mt-1 text-2xl text-zinc-800 dark:text-zinc-200">

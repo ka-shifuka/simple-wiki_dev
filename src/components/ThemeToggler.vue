@@ -63,7 +63,7 @@
 <!-- template -->
 <template>
   <div
-    class="w-[30px] h-[30px] relative rounded shadow mx-2 transition-colors duration-300 active:bg-zinc-100 dark:bg-zinc-900 dark:active:bg-zinc-950 dark:text-zinc-100 cursor-pointer"
+    class="@ThemeToggler w-[30px] h-[30px] relative rounded shadow mx-2 transition-colors duration-300 active:bg-zinc-100 dark:bg-zinc-900 dark:active:bg-zinc-950 dark:text-zinc-100 cursor-pointer"
   >
     <button
       @click="setDark(1)"

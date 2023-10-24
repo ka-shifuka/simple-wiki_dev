@@ -82,7 +82,7 @@
 <!-- template -->
 <template>
   <div
-    class="px-4 sm:px-10 xl:px-[10%] py-10 min-h-screen bg-white rounded-t-2xl dark:bg-zinc-900"
+    class="@Search px-4 sm:px-10 xl:px-[10%] py-10 min-h-screen bg-white rounded-t-2xl dark:bg-zinc-900"
   >
     <div class="w-full h-20 flex justify-center items-center">
       <!-- form and input search -->
@@ -132,7 +132,7 @@
         >
           <div
             v-for="i in data"
-            class="my-5 rounded-lg bg-zinc-100 p-5 flex flex-col justify-between md:w-[350px] md:max-h-[400px] md:overflow-scroll dark:bg-zinc-800 dark:text-zinc-200"
+            class="my-5 rounded-lg bg-zinc-100 p-5 flex flex-col justify-between md:w-[350px] md:max-h-[400px] md:overflow-scroll dark:bg-zinc-800 dark:text-zinc-300"
           >
             <div>
               <header class="flex justify-between mb-2">

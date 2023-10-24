@@ -19,7 +19,7 @@ template -->
 <template>
   <div
     id="home"
-    class="@container relative w-screen h-[100vh] flex flex-col justify-center bg-fixed bg"
+    class="@Jumbotron relative w-screen h-[100vh] flex flex-col justify-center bg-fixed bg"
   >
     <!-- background-image -->
     <div
