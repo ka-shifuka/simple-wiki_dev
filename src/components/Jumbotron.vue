@@ -39,14 +39,16 @@ template -->
     <div
       class="mx-4 sm:mx-10 xl:mx-[10%] flex flex-col justify-center gap-5 sm:flex-row sm:justify-between"
     >
-      <div class="sm:w-[300px] flex flex-col justify-center gap-4">
+      <div class="sm:w-[300px] md:w-[500px] flex flex-col justify-center gap-4">
         <!-- header -->
         <header class="">
-          <h1 class="font-semibold mt-1 text-2xl text-zinc-100 tracking-wide">
+          <h1
+            class="font-semibold mt-1 text-2xl text-zinc-100 tracking-wide md:text-4xl"
+          >
             Welcome to Simple
             <span class="text-yellow-500 font-['Grandstander']">Wiki</span>
           </h1>
-          <p class="text-zinc-200 text-[12px] tracking-tighter">
+          <p class="text-zinc-200 text-[12px] tracking-tighter md:text-[15px]">
             simpel wiki adalah aplikasi pencarian artikel sederhana berbasis web
             yang sangat mudah digunakan yang terintregasi dengan
             <a

@@ -128,36 +128,45 @@
         >
           <div
             v-for="i in data"
-            class="my-5 rounded-lg bg-zinc-100 p-5 flex flex-col justify-between md:px-16 md:w-[700px] md:min-h-[100px] dark:bg-zinc-800 dark:text-zinc-300"
+            class="my-5 rounded-lg bg-zinc-50 p-5 flex flex-col justify-between md:px-16 md:w-[700px] md:min-h-[100px] dark:bg-[hsl(240,3.7%,11.5%)] dark:text-zinc-300"
           >
             <div>
               <header class="flex justify-between mb-2">
-                <p v-if="isNotValid" class="text-[10px] text-rose-800">
+                <p
+                  v-if="isNotValid"
+                  class="text-[10px] text-rose-800 md:text-[12px]"
+                >
                   hasil mungkin tidak sesuai
                 </p>
                 <div></div>
-                <p v-if="!i.thumbnail" class="text-[10px] text-rose-800">
+                <p
+                  v-if="!i.thumbnail"
+                  class="text-[10px] text-rose-800 md:text-[12px]"
+                >
                   tidak ada gambar!!
                 </p>
               </header>
               <main>
                 <div v-if="i.thumbnail" class="relative flex justify-center">
                   <img
-                    class="relative my-2 rounded-lg bg-transparent"
+                    class="relative my-2 rounded-lg bg-transparent md:scale-75"
                     :src="i.thumbnail.source"
                     alt="thumbnail"
                     loading="lazy"
                     fetchpriority="high"
                   />
                 </div>
-                <p class="text-[12px] indent-3" v-html="i.extract"></p>
+                <p
+                  class="text-[12px] indent-2.5 md:text-[15px]"
+                  v-html="i.extract"
+                ></p>
               </main>
             </div>
 
             <div>
               <footer class="p-4 w-full h-10 flex justify-end">
                 <a
-                  class="text-blue-500 text-[10px] underline"
+                  class="text-blue-500 text-[10px] underline md:text-[12px]"
                   :href="`https://id.m.wikipedia.org/wiki/${i.title}`"
                   >lihat di wikipedia</a
                 >

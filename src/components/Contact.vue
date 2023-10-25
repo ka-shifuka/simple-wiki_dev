@@ -10,12 +10,12 @@
   >
     <div class="flex flex-col justify-center items-center px-10">
       <h1
-        class="font-semibold text-3xl text-zinc-800 dark:text-zinc-300 tracking-wider"
+        class="font-semibold text-3xl text-zinc-800 dark:text-zinc-300 tracking-wider md:text-4xl"
       >
         Contact me
       </h1>
       <p
-        class="text-center text-zinc-700 text-[10px] dark:text-zinc-400 max-w-sm"
+        class="text-center text-zinc-700 text-[10px] dark:text-zinc-400 max-w-sm md:text-[12px]"
       >
         jika kamu menemukan bug lain atau membutuhkan bantuan lainnya hubungi
         saya sebagai pembuat melalui :
