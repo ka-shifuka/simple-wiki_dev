@@ -124,7 +124,7 @@
       :class="menuCounter ? '_in' : '_out'"
     >
       <div
-        class="w-full bg-transparent"
+        class="w-full bg-transparent cursor-pointer"
         @click="menuCounter = !menuCounter"
       ></div>
       <section
@@ -153,28 +153,32 @@
             <li class="">
               <a
                 href="#home"
-                class="block w-full p-2 rounded-md bg-zinc-100 cursor-pointer transition-colors duration-300 dark:bg-zinc-950"
+                class="cursor-pointer block w-full p-2 rounded-md bg-zinc-100 cursor-pointer transition-colors duration-300 dark:bg-zinc-950"
+                @click="menuCounter = !menuCounter"
                 >Home</a
               >
             </li>
             <li class="">
               <a
                 href="#search"
-                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
+                class="cursor-pointer block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
+                @click="menuCounter = !menuCounter"
                 >Search</a
               >
             </li>
             <li class="">
               <a
                 href="#about"
-                class="block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
+                class="cursor-pointer block w-full p-2 rounded-md bg-zinc-50 cursor-pointer transition-colors duration-300 dark:bg-zinc-900"
+                @click="menuCounter = !menuCounter"
                 >About</a
               >
             </li>
             <li class="">
               <a
                 href="#contact"
-                class="block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300 cursor-pointer dark:bg-zinc-900"
+                class="cursor-pointer block w-full p-2 rounded-md bg-zinc-50 transition-colors duration-300 cursor-pointer dark:bg-zinc-900"
+                @click="menuCounter = !menuCounter"
                 >Contact</a
               >
             </li>
@@ -239,17 +243,14 @@
   @keyframes in {
     0% {
       width: 100vw;
-      backdrop-filter: blur(1px);
     }
     50% {
       width: 100vw;
       background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(1px);
     }
     100% {
       width: 100vw;
       background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(1px);
     }
   }
   @keyframes out {

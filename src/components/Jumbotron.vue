@@ -47,8 +47,8 @@ template -->
             <span class="text-yellow-500 font-['Grandstander']">Wiki</span>
           </h1>
           <p class="text-zinc-200 text-[12px] tracking-tighter">
-            simpel wiki adalah aplikasi pencarian sederhana berbasis web yang
-            sangat mudah digunakan yang terintregasi dengan
+            simpel wiki adalah aplikasi pencarian artikel sederhana berbasis web
+            yang sangat mudah digunakan yang terintregasi dengan
             <a
               href="https://github.com/mudroljub/wikipedia-api-docs"
               class="text-blue-400 underline"
@@ -61,7 +61,9 @@ template -->
         <!-- main -->
         <main>
           <div class="flex gap-2 text-zinc-800 font-semibold text-sm">
-            <a href="" class="p-2 rounded-lg bg-yellow-500 tracking-wide"
+            <a
+              href=""
+              class="p-2 rounded-lg bg-yellow-500 tracking-wide transition-colors duration-300 cursor-pointer hover:bg-yellow-600"
               >Github</a
             >
           </div>

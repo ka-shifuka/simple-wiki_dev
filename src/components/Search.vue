@@ -85,14 +85,14 @@
       <!-- form and input search -->
       <div class="text-sm relative flex items-center" id="search">
         <input
-          class="border-2 border-zinc-200 p-2 w-[250px] rounded-lg focus:outline-none md:w-[500px] dark:bg-zinc-800 dark:text-zinc-500 dark:border-[hsl(240,15%,15.9%)]"
+          class="border-2 border-zinc-200 p-2 w-[250px] rounded-lg focus:outline-none md:w-[500px] dark:bg-zinc-800 dark:text-zinc-300 dark:border-[hsl(240,15%,15.9%)]"
           type="search"
           id="search_bar"
           placeholder="Search something like 'arya'"
         />
         <i class="bi bi-search absolute right-3 text-zinc-400"></i>
         <p
-          class="text-zinc-400 text-[8px] absolute bottom-[-18px] right-0 tracking-tighter dark:text-zinc-700"
+          class="text-zinc-400 text-[8px] absolute bottom-[-18px] right-0 tracking-tighter dark:text-zinc-600"
         >
           !Tips jika query kurang sesuai ketik enter dua kali.
         </p>
@@ -128,7 +128,7 @@
         >
           <div
             v-for="i in data"
-            class="my-5 rounded-lg bg-zinc-100 p-5 flex flex-col justify-between md:w-[350px] md:max-h-[400px] md:overflow-scroll dark:bg-zinc-800 dark:text-zinc-300"
+            class="my-5 rounded-lg bg-zinc-100 p-5 flex flex-col justify-between md:px-16 md:w-[700px] md:min-h-[100px] dark:bg-zinc-800 dark:text-zinc-300"
           >
             <div>
               <header class="flex justify-between mb-2">
