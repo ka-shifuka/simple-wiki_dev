@@ -62,7 +62,7 @@ template -->
         <main>
           <div class="flex gap-2 text-zinc-800 font-semibold text-sm">
             <a
-              href="https://github.com/ka-shifuka/simple-wiki"
+              href="https://github.com/ka-shifuka/simple-wiki_dev"
               class="p-2 rounded-lg bg-yellow-500 tracking-wide transition-colors duration-300 cursor-pointer hover:bg-yellow-600"
               >Github</a
             >
