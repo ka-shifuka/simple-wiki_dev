@@ -15,7 +15,7 @@
         Contact me
       </h1>
       <p
-        class="text-center text-zinc-700 text-[10px] dark:text-zinc-400 max-w-sm md:text-[12px]"
+        class="text-center max-w-sm tracking-tighter text-zinc-700 text-[10px] dark:text-zinc-400 md:text-[12px]"
       >
         jika kamu menemukan bug lain atau membutuhkan bantuan lainnya hubungi
         saya sebagai pembuat melalui :

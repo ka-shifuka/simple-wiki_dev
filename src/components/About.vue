@@ -21,26 +21,40 @@
     </div>
     <div class="flex flex-wrap justify-center items-center gap-5 my-5">
       <div
-        class="w-[300px] h-[300px] bg-zinc-50 rounded-lg p-4 dark:bg-[hsl(240,3.7%,11.5%)]"
+        class="w-[300px] h-[300px] flex flex-col justify-between bg-zinc-50 rounded-lg p-4 dark:bg-[hsl(240,3.7%,11.5%)]"
       >
-        <h1
-          class="font-semibold mt-1 text-lg text-zinc-800 dark:text-zinc-300 md:text-xl"
-        >
-          Simple
-          <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
-        </h1>
-        <p
-          class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:texy-[15px]"
-        >
-          Adalah aplikasi open source yang dikembangkan sendiri oleh arya-mems
-          sebagai project gabutnya. simple wiki adalah aplikasi pencari artikel
-          sederhana yang terintegrasi dengan
-          <a
-            href="https://github.com/mudroljub/wikipedia-api-docs"
-            class="text-blue-400 underline dark:brightness-75"
-            >API Wikipedia.</a
+        <div>
+          <h1
+            class="font-semibold mt-1 text-lg text-zinc-800 dark:text-zinc-300 md:text-xl"
           >
-        </p>
+            Simple
+            <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
+          </h1>
+          <p
+            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
+          >
+            Adalah aplikasi open source yang dikembangkan sendiri oleh arya-mems
+            sebagai project gabutnya. simple wiki adalah aplikasi pencari
+            artikel sederhana yang terintegrasi dengan
+            <a
+              href="https://github.com/mudroljub/wikipedia-api-docs"
+              class="text-blue-400 underline dark:brightness-75"
+              >API Wikipedia.</a
+            >
+          </p>
+        </div>
+        <div class="py-4">
+          <p
+            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
+          >
+            lihat repositori di
+            <a
+              href="https://github.com/ka-shifuka/simple-wiki_dev"
+              class="text-blue-500 underline dark:brightness-75"
+              >github</a
+            >
+          </p>
+        </div>
       </div>
 
       <div
@@ -50,7 +64,7 @@
           Warning!!!
         </h1>
         <p
-          class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[15px]"
+          class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
         >
           Aplikasi ini masih memiliki bug berupa query yang terkadang aneh ini
           masih dalam tahap pengembanggan.
@@ -58,12 +72,12 @@
 
         <div class="mt-5">
           <p
-            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400"
+            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
           >
             Tool dan alat pengembang lainya yang saya gunakan.
           </p>
           <ul
-            class="px-5 text-zinc-600 text-[10px] list-disc dark:text-zinc-400"
+            class="px-5 text-zinc-600 text-[10px] list-disc dark:text-zinc-400 md:text-[12px]"
           >
             <li class="">Acode (Code Editor)</li>
             <li class="">Termux + Nodejs (JavaScript runtime)</li>

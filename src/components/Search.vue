@@ -99,7 +99,7 @@
       </div>
       <!-- form and input search -->
     </div>
-    <div class="relative w-[] min-h-[300px]">
+    <div class="relative min-h-[300px]">
       <!-- load property -->
       <div
         v-if="isLoad"
@@ -157,7 +157,7 @@
                   />
                 </div>
                 <p
-                  class="text-[12px] indent-2.5 md:text-[15px]"
+                  class="text-[12px] indent-2.5 md:text-[14px]"
                   v-html="i.extract"
                 ></p>
               </main>
