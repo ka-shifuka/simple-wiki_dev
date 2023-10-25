@@ -9,7 +9,7 @@
   onMounted(() => {
     const searchBar = document.querySelector("#search_bar");
     const errProp = document.querySelector("#error-property");
-    // loading bar
+    // loading bar and error property
     searchBar.addEventListener("keyup", () => {
       isLoad.value = true;
       data.value = {};
@@ -86,15 +86,15 @@
       <div class="text-sm relative flex items-center" id="search">
         <input
           class="border-2 border-zinc-200 p-2 w-[250px] rounded-lg focus:outline-none md:w-[500px] dark:bg-zinc-800 dark:text-zinc-500 dark:border-[hsl(240,15%,15.9%)]"
-          type="text"
+          type="search"
           id="search_bar"
           placeholder="Search something like 'arya'"
         />
         <i class="bi bi-search absolute right-3 text-zinc-400"></i>
         <p
-          class="text-zinc-400 text-[8px] absolute bottom-[-18px] right-0 dark:text-zinc-700"
+          class="text-zinc-400 text-[8px] absolute bottom-[-18px] right-0 tracking-tighter dark:text-zinc-700"
         >
-          !Tips jika query tidak sesuai ketik enter dua kali.
+          !Tips jika query kurang sesuai ketik enter dua kali.
         </p>
       </div>
       <!-- form and input search -->
