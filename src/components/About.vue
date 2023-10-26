@@ -77,7 +77,7 @@
             Tool dan alat pengembang lainya yang saya gunakan.
           </p>
           <ul
-            class="px-5 text-zinc-600 text-[10px] list-disc dark:text-zinc-400 md:text-[12px]"
+            class="px-5 text-zinc-600 text-[10px] list-disc dark:text-zinc-400 "
           >
             <li class="">Acode (Code Editor)</li>
             <li class="">Termux + Nodejs (JavaScript runtime)</li>
