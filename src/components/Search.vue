@@ -92,7 +92,7 @@
         />
         <i class="bi bi-search absolute right-3 text-zinc-400"></i>
         <p
-          class="text-zinc-400 text-[8px] absolute bottom-[-18px] right-0 tracking-tighter dark:text-zinc-600"
+          class="text-zinc-400 text-[8px] absolute bottom-[-18px] right-0 tracking-tighter dark:text-zinc-600 md:text-[9px]"
         >
           !Tips jika query kurang sesuai ketik enter dua kali.
         </p>
@@ -157,7 +157,7 @@
                   />
                 </div>
                 <p
-                  class="text-[12px] indent-2.5 md:text-[14px]"
+                  class="text-[12px] indent-2.5 md:text-[13px]"
                   v-html="i.extract"
                 ></p>
               </main>

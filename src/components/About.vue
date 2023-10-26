@@ -31,7 +31,7 @@
             <span class="text-yellow-700 font-['Grandstander']">Wiki</span>
           </h1>
           <p
-            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
+            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[13px]"
           >
             Adalah aplikasi open source yang dikembangkan sendiri oleh arya-mems
             sebagai project gabutnya. simple wiki adalah aplikasi pencari
@@ -45,7 +45,7 @@
         </div>
         <div class="py-4">
           <p
-            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
+            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400"
           >
             lihat repositori di
             <a
@@ -64,7 +64,7 @@
           Warning!!!
         </h1>
         <p
-          class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
+          class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[13px]"
         >
           Aplikasi ini masih memiliki bug berupa query yang terkadang aneh ini
           masih dalam tahap pengembanggan.
@@ -72,12 +72,12 @@
 
         <div class="mt-5">
           <p
-            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[14px]"
+            class="text-zinc-700 text-[12px] tracking-tighter dark:text-zinc-400 md:text-[13px]"
           >
             Tool dan alat pengembang lainya yang saya gunakan.
           </p>
           <ul
-            class="px-5 text-zinc-600 text-[10px] list-disc dark:text-zinc-400 "
+            class="px-5 text-zinc-600 text-[10px] list-disc dark:text-zinc-400"
           >
             <li class="">Acode (Code Editor)</li>
             <li class="">Termux + Nodejs (JavaScript runtime)</li>

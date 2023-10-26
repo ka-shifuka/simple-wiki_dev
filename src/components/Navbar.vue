@@ -120,11 +120,13 @@
 
     <!-- menu list -->
     <div
-      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300 flex flex-1 cursor-pointer"
+      class="fixed top-0 right-0 z-20 h-screen transition-colors duration-300 flex flex-1"
       :class="menuCounter ? '_in' : '_out'"
-      @click="menuCounter = !menuCounter"
     >
-      <div class="w-full bg-transparent"></div>
+      <div
+        class="w-full bg-transparent cursor-pointer scale-150"
+        @click="menuCounter = !menuCounter"
+      ></div>
       <section
         role="menu_list"
         class="@menu_list fixed top-0 right-0 h-screen transition-all duration-300 bg-white overflow-hidden md:absolute md:right-10 md:top-16 md:rounded-lg md:flex md:flex-row-reverse md:justify-between md:items-center md:relative xl:right-[10%] dark:bg-zinc-800"
