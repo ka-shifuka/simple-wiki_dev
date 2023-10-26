@@ -6,7 +6,7 @@ adalah sebuah aplikasi untuk mencari informasi dari wikipedia menggunakan wikipe
 ### installasi 
 ```
   git clone https://github.com/ka-shifuka/simple-wiki_dev 
-  cd siimple-wiki
+  cd simple-wiki_dev
   
   pnpm install
   pnpm dev

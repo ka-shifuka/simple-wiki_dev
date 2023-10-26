@@ -19,7 +19,7 @@
         <Jumbotron></Jumbotron>
       </header>
       <main>
-        <Search></Search>
+        <search></search>
         <About></About>
         <Contact></Contact>
       </main>
@@ -31,7 +31,7 @@
       <div
         class="w-full h-7 -z-20 absolute -top-6 bg-white dark:bg-zinc-900"
       ></div>
-      <Footer></Footer>
+      <footer></footer>
     </div>
     <!-- fotter page -->
   </div>
