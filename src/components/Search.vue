@@ -49,7 +49,7 @@
 
         //if the query filter is empty
         if (filterQuery.length == 0) {
-          data.value = query.sort((a, b) => {
+          data.value = await query.sort((a, b) => {
             var titleA = a.title.toUpperCase();
             var titleB = b.title.toUpperCase();
             if (titleA < titleB) return -1;
@@ -58,7 +58,7 @@
           });
           isNotValid.value = true;
         } else {
-          data.value = filterQuery.sort((a, b) => {
+          data.value = await filterQuery.sort((a, b) => {
             var titleA = a.title.toUpperCase();
             var titleB = b.title.toUpperCase();
             if (titleA < titleB) return -1;
