@@ -46,26 +46,7 @@
           isNotValid.value = false;
           return includeTitle;
         });
-
-        //if the query filter is empty
-        if (filterQuery.length == 0) {
-          data.value = await query.sort((a, b) => {
-            var titleA = a.title.toUpperCase();
-            var titleB = b.title.toUpperCase();
-            if (titleA < titleB) return -1;
-            if (titleA > titleB) return 1;
-            return 0;
-          });
-          isNotValid.value = true;
-        } else {
-          data.value = await filterQuery.sort((a, b) => {
-            var titleA = a.title.toUpperCase();
-            var titleB = b.title.toUpperCase();
-            if (titleA < titleB) return -1;
-            if (titleA > titleB) return 1;
-            return 0;
-          });
-        }
+        data.value = await result(filterQuery, query);
         errProp.classList.add("hidden");
       } catch (err) {
         errProp.classList.remove("hidden");
@@ -73,6 +54,28 @@
       isLoad.value = false;
     });
   });
+
+  function result(filterQuery, query) {
+    let counter = null;
+    //if filterQuery is empty data.value is trun to query
+    if (filterQuery.length == 0) {
+      counter = query.sort((a, b) => {
+        var titleA = a.title.toUpperCase();
+        var titleB = b.title.toUpperCase();
+        if (titleA < titleB) return -1;
+        if (titleA > titleB) return 1;
+      });
+      isNotValid.value = true;
+    } else {
+      counter = filterQuery.sort((a, b) => {
+        var titleA = a.title.toUpperCase();
+        var titleB = b.title.toUpperCase();
+        if (titleA < titleB) return -1;
+        if (titleA > titleB) return 1;
+      });
+    }
+    return counter;
+  }
 </script>
 <!-- end script -->
 
@@ -147,7 +150,7 @@
                 </p>
               </header>
               <main>
-                <div v-if="i.thumbnail" class="relative flex justify-center">
+                <figure v-if="i.thumbnail" class="relative flex justify-center">
                   <img
                     class="relative my-2 rounded-lg bg-transparent md:scale-75"
                     :src="i.thumbnail.source"
@@ -155,11 +158,13 @@
                     loading="lazy"
                     fetchpriority="high"
                   />
-                </div>
-                <p
-                  class="text-[12px] indent-2.5 md:text-[13px]"
-                  v-html="i.extract"
-                ></p>
+                </figure>
+                <figcaption>
+                  <p
+                    class="text-[12px] indent-2.5 md:text-[13px]"
+                    v-html="i.extract"
+                  ></p>
+                </figcaption>
               </main>
             </div>
 
