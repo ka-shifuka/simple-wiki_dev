@@ -27,11 +27,11 @@
     <!-- main header page -->
 
     <!-- fotter page -->
-    <div class="relative">
+    <div class="relative z-20">
       <div
         class="w-full h-7 -z-20 absolute -top-6 bg-white dark:bg-zinc-900"
       ></div>
-      <footer></footer>
+      <Footer></Footer>
     </div>
     <!-- fotter page -->
   </div>

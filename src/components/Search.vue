@@ -9,7 +9,8 @@
   onMounted(() => {
     const searchBar = document.querySelector("#search_bar");
     const errProp = document.querySelector("#error-property");
-    // loading bar and error property
+
+    //loading bar and error property
     searchBar.addEventListener("keyup", () => {
       isLoad.value = true;
       data.value = {};
@@ -23,10 +24,10 @@
       }
     }, 50);
 
-    // get data from wikipedia
+    //get data from wikipedia
     searchBar.addEventListener("keyup", async () => {
       try {
-        const search = searchBar.value;
+        const search = searchBar.value.trim().split(" ").join("+");
         const url = `https://id.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${search}&exintro=&prop=extracts%7Cpageimages&pithumbsize=600&format=json&origin=*`;
 
         const response = await fetch(url);
@@ -36,17 +37,17 @@
           query.push(dataJson.query.pages[i]);
         }
 
-        // filtering query because some of the output does not match the query
+        //filtering query because some of the output does not match the query
         const filterQuery = query.filter(data => {
           const title = data.title.toLowerCase();
-          const includeTitle = title.includes(search.trim().toLowerCase());
+          const includeTitle = title.includes(searchBar.value.trim());
           if (data.extract.includes("<pre>")) {
             data.extract = data.extract.split("<pre>");
           }
           isNotValid.value = false;
           return includeTitle;
         });
-        data.value = await result(filterQuery, query);
+        data.value = result(filterQuery, query);
         errProp.classList.add("hidden");
       } catch (err) {
         errProp.classList.remove("hidden");
@@ -66,6 +67,7 @@
         if (titleA > titleB) return 1;
       });
       isNotValid.value = true;
+      errProp.classList.remove("hidden");
     } else {
       counter = filterQuery.sort((a, b) => {
         var titleA = a.title.toUpperCase();
