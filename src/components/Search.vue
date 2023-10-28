@@ -17,7 +17,7 @@
     });
     setInterval(() => {
       if (searchBar.value === "") {
-        errProp.classList.remove("hidden");
+        errProp.classList.add("hidden");
         isLoad.value = false;
         data.value = {};
         return;
@@ -51,8 +51,9 @@
         errProp.classList.add("hidden");
       } catch (err) {
         errProp.classList.remove("hidden");
+      } finally {
+        isLoad.value = false;
       }
-      isLoad.value = false;
     });
   });
 
@@ -67,7 +68,6 @@
         if (titleA > titleB) return 1;
       });
       isNotValid.value = true;
-      errProp.classList.remove("hidden");
     } else {
       counter = filterQuery.sort((a, b) => {
         var titleA = a.title.toUpperCase();
